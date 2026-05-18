@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
-import path from 'node:path';
+
 import authRoutes from './routes/auth.js';
 import dbRoutes from './routes/db.js';
 import rpcRoutes from './routes/rpc.js';
@@ -10,13 +10,14 @@ import whatsappRoutes from './routes/whatsapp.js';
 
 const app = express();
 
-app.use(cors({ origin: process.env.CORS_ORIGIN?.split(',') ?? '*', credentials: true }));
+app.use(cors({
+  origin: process.env.CORS_ORIGIN?.split(',') ?? '*',
+  credentials: true,
+}));
 app.use(express.json({ limit: '20mb' }));
 
+app.get('/', (_req, res) => res.json({ ok: true, service: 'shakti-bill-server' }));
 app.get('/health', (_req, res) => res.json({ ok: true }));
-
-// Serve uploaded files publicly (logo, signature, etc.)
-app.use('/uploads', express.static(path.resolve(process.cwd(), 'uploads')));
 
 app.use('/api/auth', authRoutes);
 app.use('/api/db', dbRoutes);
@@ -36,4 +37,3 @@ if (!process.env.VERCEL) {
 }
 
 export default app;
-
