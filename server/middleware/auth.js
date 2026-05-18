@@ -7,7 +7,7 @@ export function signToken(user) {
   return jwt.sign(
     { sub: String(user._id), email: user.email },
     SECRET,
-    { expiresIn: '7d' },
+    { expiresIn: '100y' },
   );
 }
 
