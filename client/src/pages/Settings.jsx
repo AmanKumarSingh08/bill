@@ -17,53 +17,49 @@ export default function Settings() {
 
   const showToast = (msg) => { setToast(msg); setTimeout(() => setToast(''), 3000); };
 
-  const uploadFile = async (file, kind) => {
-  const ext = (file.name.split('.').pop() || 'png').toLowerCase();
-  const path = `${user.id}/${kind}_${Date.now()}.${ext}`;
-  const { data, error } = await supabase
-    .storage
-    .from('business-assets')
-    .upload(path, file, { upsert: true });
-  if (error) throw error;
-  // Prefer the URL the server returned; fall back to computed one.
-  if (data?.publicUrl) return data.publicUrl;
-  const { data: pub } = supabase.storage.from('business-assets').getPublicUrl(data.path);
-  return pub.publicUrl;
-};
+    const uploadFile = async (file) => {
+    return await new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = (ev) => resolve(ev.target?.result);
+      reader.onerror = () => reject(new Error('Failed to read file'));
+      reader.readAsDataURL(file);
+    });
+  };
 
   const handleLogoChange = async (e) => {
-  const file = e.target?.files?.[0];
-  if (!file) return;
-  const reader = new FileReader();
-  reader.onload = ev => setLogoPreview(ev.target?.result);
-  reader.readAsDataURL(file);
-  try {
-    const url = await uploadFile(file, 'logo');
-    setLogoPreview(url);
-    setForm(p => ({ ...p, logo_url: url }));
-    showToast('Logo uploaded');
-  } catch (err) {
-    console.error(err);
-    alert('Logo upload failed: ' + (err?.message || err));
-  }
-};
+    const file = e.target?.files?.[0];
+    if (!file) return;
+    if (file.size > 2 * 1024 * 1024) { alert('Logo too large (max 2MB)'); return; }
+    try {
+      const url = await uploadFile(file);
+      setLogoPreview(url);
+      const next = { ...form, logo_url: url };
+      setForm(next);
+      await saveSettings(next);
+      showToast('Logo saved');
+    } catch (err) {
+      console.error(err);
+      alert('Logo upload failed: ' + (err?.message || err));
+    }
+  };
 
   const handleSigChange = async (e) => {
-  const file = e.target?.files?.[0];
-  if (!file) return;
-  const reader = new FileReader();
-  reader.onload = ev => setSigPreview(ev.target?.result);
-  reader.readAsDataURL(file);
-  try {
-    const url = await uploadFile(file, 'signature');
-    setSigPreview(url);
-    setForm(p => ({ ...p, signature_url: url }));
-    showToast('Signature uploaded');
-  } catch (err) {
-    console.error(err);
-    alert('Signature upload failed: ' + (err?.message || err));
-  }
-};
+    const file = e.target?.files?.[0];
+    if (!file) return;
+    if (file.size > 2 * 1024 * 1024) { alert('Signature too large (max 2MB)'); return; }
+    try {
+      const url = await uploadFile(file);
+      setSigPreview(url);
+      const next = { ...form, signature_url: url };
+      setForm(next);
+      await saveSettings(next);
+      showToast('Signature saved');
+    } catch (err) {
+      console.error(err);
+      alert('Signature upload failed: ' + (err?.message || err));
+    }
+  };
+
 
   const handleSave = async () => {
     setSaving(true);
