@@ -1,4 +1,4 @@
-const _jsxFileName = "";import {jsxDEV as _jsxDEV} from "react/jsx-dev-runtime";import { createContext, useContext, useEffect, useState, } from 'react';
+const _jsxFileName = "";import {jsx as _jsx, jsxs as _jsxs} from "react/jsx-runtime";import { createContext, useContext, useEffect, useState, } from 'react';
 import { supabase } from '../lib/supabase';
 
 import { useAuth } from './AuthContext';
@@ -68,7 +68,7 @@ export function SettingsProvider({ children }) {
   };
 
   return (
-    _jsxDEV(SettingsContext.Provider, { value: { settings, loading, saveSettings, refresh: load }, children: 
+    _jsx(SettingsContext.Provider, { value: { settings, loading, saveSettings, refresh: load }, children: 
       children
     }, void 0, false, {fileName: _jsxFileName, lineNumber: 71}, this)
   );

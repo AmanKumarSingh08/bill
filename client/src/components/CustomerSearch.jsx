@@ -1,4 +1,4 @@
-const _jsxFileName = "";import {jsxDEV as _jsxDEV} from "react/jsx-dev-runtime"; function _nullishCoalesce(lhs, rhsFn) { if (lhs != null) { return lhs; } else { return rhsFn(); } }import { useState, useEffect, useRef } from 'react';
+const _jsxFileName = "";import {jsx as _jsx, jsxs as _jsxs} from "react/jsx-runtime"; function _nullishCoalesce(lhs, rhsFn) { if (lhs != null) { return lhs; } else { return rhsFn(); } }import { useState, useEffect, useRef } from 'react';
 import { supabase } from '../lib/supabase';
 
 import { useAuth } from '../contexts/AuthContext';
@@ -36,10 +36,10 @@ export default function CustomerSearch({ value, onChange, onSelect }) {
   }, [value, user]);
 
   return (
-    _jsxDEV('div', { ref: ref, className: "relative", children: [
-      _jsxDEV('div', { className: "relative", children: [
-        _jsxDEV(Search, { className: "absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400"      ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 41}, this )
-        , _jsxDEV('input', {
+    _jsx('div', { ref: ref, className: "relative", children: [
+      _jsx('div', { className: "relative", children: [
+        _jsx(Search, { className: "absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400"      ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 41}, this )
+        , _jsx('input', {
           type: "text",
           value: value,
           onChange: e => onChange(e.target.value),
@@ -49,18 +49,18 @@ export default function CustomerSearch({ value, onChange, onSelect }) {
         )
       ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 40}, this)
       , open && suggestions.length > 0 && (
-        _jsxDEV('div', { className: "absolute z-50 w-full bg-white border border-gray-200 rounded-lg shadow-xl mt-1 max-h-64 overflow-y-auto"          , children: 
+        _jsx('div', { className: "absolute z-50 w-full bg-white border border-gray-200 rounded-lg shadow-xl mt-1 max-h-64 overflow-y-auto"          , children: 
           suggestions.map(c => (
-            _jsxDEV('button', {
+            _jsx('button', {
 
               type: "button",
               className: "w-full text-left px-4 py-3 hover:bg-sky-50 border-b border-gray-50 last:border-0 transition-colors"        ,
               onClick: () => { onSelect(c); setOpen(false); },
  children: [
-              _jsxDEV('div', { className: "font-medium text-gray-800 text-sm"  , children: c.name}, void 0, false, {fileName: _jsxFileName, lineNumber: 60}, this)
-              , _jsxDEV('div', { className: "text-xs text-gray-500 mt-0.5"  , children: [c.mobile, " " , c.address && `• ${c.address}`]}, void 0, true, {fileName: _jsxFileName, lineNumber: 61}, this)
+              _jsx('div', { className: "font-medium text-gray-800 text-sm"  , children: c.name}, void 0, false, {fileName: _jsxFileName, lineNumber: 60}, this)
+              , _jsx('div', { className: "text-xs text-gray-500 mt-0.5"  , children: [c.mobile, " " , c.address && `• ${c.address}`]}, void 0, true, {fileName: _jsxFileName, lineNumber: 61}, this)
               , c.outstanding_balance > 0 && (
-                _jsxDEV('div', { className: "text-xs text-amber-600 mt-0.5"  , children: ["Outstanding: ₹" , c.outstanding_balance]}, void 0, true, {fileName: _jsxFileName, lineNumber: 63}, this)
+                _jsx('div', { className: "text-xs text-amber-600 mt-0.5"  , children: ["Outstanding: ₹" , c.outstanding_balance]}, void 0, true, {fileName: _jsxFileName, lineNumber: 63}, this)
               )
             ]}, c.id, true, {fileName: _jsxFileName, lineNumber: 54}, this)
           ))

@@ -1,4 +1,4 @@
-const _jsxFileName = "";import {jsxDEV as _jsxDEV} from "react/jsx-dev-runtime"; function _nullishCoalesce(lhs, rhsFn) { if (lhs != null) { return lhs; } else { return rhsFn(); } } function _optionalChain(ops) { let lastAccessLHS = undefined; let value = ops[0]; let i = 1; while (i < ops.length) { const op = ops[i]; const fn = ops[i + 1]; i += 2; if ((op === 'optionalAccess' || op === 'optionalCall') && value == null) { return undefined; } if (op === 'access' || op === 'optionalAccess') { lastAccessLHS = value; value = fn(value); } else if (op === 'call' || op === 'optionalCall') { value = fn((...args) => value.call(lastAccessLHS, ...args)); lastAccessLHS = undefined; } } return value; }import { useState, useEffect, useRef } from 'react';
+const _jsxFileName = "";import {jsx as _jsx, jsxs as _jsxs} from "react/jsx-runtime"; function _nullishCoalesce(lhs, rhsFn) { if (lhs != null) { return lhs; } else { return rhsFn(); } } function _optionalChain(ops) { let lastAccessLHS = undefined; let value = ops[0]; let i = 1; while (i < ops.length) { const op = ops[i]; const fn = ops[i + 1]; i += 2; if ((op === 'optionalAccess' || op === 'optionalCall') && value == null) { return undefined; } if (op === 'access' || op === 'optionalAccess') { lastAccessLHS = value; value = fn(value); } else if (op === 'call' || op === 'optionalCall') { value = fn((...args) => value.call(lastAccessLHS, ...args)); lastAccessLHS = undefined; } } return value; }import { useState, useEffect, useRef } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useReactToPrint } from 'react-to-print';
 import { supabase } from '../lib/supabase';
@@ -332,133 +332,133 @@ export default function InvoiceForm() {
   };
 
   return (
-    _jsxDEV('div', { className: "space-y-4", children: [
+    _jsx('div', { className: "space-y-4", children: [
       /* Toast */
       toast && (
-        _jsxDEV('div', { className: "fixed top-4 right-4 z-50 bg-gray-800 text-white px-4 py-3 rounded-lg shadow-xl text-sm animate-pulse"           , children: 
+        _jsx('div', { className: "fixed top-4 right-4 z-50 bg-gray-800 text-white px-4 py-3 rounded-lg shadow-xl text-sm animate-pulse"           , children: 
           toast
         }, void 0, false, {fileName: _jsxFileName, lineNumber: 284}, this)
       )
 
       /* Header */
-      , _jsxDEV('div', { className: "flex flex-wrap items-center justify-between gap-3"    , children: [
-        _jsxDEV('h1', { className: "text-xl font-bold text-gray-800"  , children: isEdit ? 'Edit Invoice' : 'New Invoice'}, void 0, false, {fileName: _jsxFileName, lineNumber: 291}, this)
-        , _jsxDEV('div', { className: "flex flex-wrap gap-2"  , children: [
-          _jsxDEV('button', { onClick: () => setPreviewOpen(true), className: "flex items-center gap-1.5 px-3 py-2 border border-gray-300 rounded-lg text-sm hover:bg-gray-50 transition-colors"          , children: [
-            _jsxDEV(Eye, { className: "w-4 h-4" ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 294}, this ), " Preview"
+      , _jsx('div', { className: "flex flex-wrap items-center justify-between gap-3"    , children: [
+        _jsx('h1', { className: "text-xl font-bold text-gray-800"  , children: isEdit ? 'Edit Invoice' : 'New Invoice'}, void 0, false, {fileName: _jsxFileName, lineNumber: 291}, this)
+        , _jsx('div', { className: "flex flex-wrap gap-2"  , children: [
+          _jsx('button', { onClick: () => setPreviewOpen(true), className: "flex items-center gap-1.5 px-3 py-2 border border-gray-300 rounded-lg text-sm hover:bg-gray-50 transition-colors"          , children: [
+            _jsx(Eye, { className: "w-4 h-4" ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 294}, this ), " Preview"
           ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 293}, this)
-          , _jsxDEV('button', { onClick: () => handlePrint(), disabled: printing,
+          , _jsx('button', { onClick: () => handlePrint(), disabled: printing,
             className: "flex items-center gap-1.5 px-3 py-2 border border-gray-300 rounded-lg text-sm hover:bg-gray-50 transition-colors disabled:opacity-50"           , children: [
-            _jsxDEV(Printer, { className: "w-4 h-4" ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 298}, this ), " " , printing ? 'Printing...' : 'Print'
+            _jsx(Printer, { className: "w-4 h-4" ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 298}, this ), " " , printing ? 'Printing...' : 'Print'
           ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 296}, this)
-          , _jsxDEV('button', { onClick: handleDownloadPDF, disabled: pdfLoading,
+          , _jsx('button', { onClick: handleDownloadPDF, disabled: pdfLoading,
             className: "flex items-center gap-1.5 px-3 py-2 border border-gray-300 rounded-lg text-sm hover:bg-gray-50 transition-colors disabled:opacity-50"           , children: [
-            _jsxDEV(Download, { className: "w-4 h-4" ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 302}, this ), " " , pdfLoading ? 'Generating...' : 'PDF'
+            _jsx(Download, { className: "w-4 h-4" ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 302}, this ), " " , pdfLoading ? 'Generating...' : 'PDF'
           ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 300}, this)
-          , _jsxDEV('button', { onClick: handleWhatsApp, disabled: whatsappLoading,
+          , _jsx('button', { onClick: handleWhatsApp, disabled: whatsappLoading,
             className: "flex items-center gap-1.5 px-3 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg text-sm transition-colors disabled:opacity-50"           , children: [
-            _jsxDEV(MessageCircle, { className: "w-4 h-4" ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 306}, this ), " WhatsApp"
+            _jsx(MessageCircle, { className: "w-4 h-4" ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 306}, this ), " WhatsApp"
           ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 304}, this)
-          , _jsxDEV('button', { onClick: handleSave, disabled: saving,
+          , _jsx('button', { onClick: handleSave, disabled: saving,
             className: "flex items-center gap-1.5 px-4 py-2 bg-sky-600 hover:bg-sky-700 text-white rounded-lg text-sm font-medium transition-colors disabled:opacity-50"            , children: [
-            _jsxDEV(Save, { className: "w-4 h-4" ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 310}, this ), " " , saving ? 'Saving...' : 'Save Invoice'
+            _jsx(Save, { className: "w-4 h-4" ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 310}, this ), " " , saving ? 'Saving...' : 'Save Invoice'
           ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 308}, this)
         ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 292}, this)
       ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 290}, this)
 
       /* Invoice details */
-      , _jsxDEV('div', { className: "bg-white rounded-xl shadow-sm p-5 grid grid-cols-1 md:grid-cols-3 gap-4"       , children: [
-        _jsxDEV('div', { children: [
-          _jsxDEV('label', { className: "block text-xs font-medium text-gray-600 mb-1"    , children: "Invoice No. *"  }, void 0, false, {fileName: _jsxFileName, lineNumber: 318}, this)
-          , _jsxDEV('input', { value: invoiceNo, onChange: e => setInvoiceNo(e.target.value), className: "w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"         ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 319}, this )
+      , _jsx('div', { className: "bg-white rounded-xl shadow-sm p-5 grid grid-cols-1 md:grid-cols-3 gap-4"       , children: [
+        _jsx('div', { children: [
+          _jsx('label', { className: "block text-xs font-medium text-gray-600 mb-1"    , children: "Invoice No. *"  }, void 0, false, {fileName: _jsxFileName, lineNumber: 318}, this)
+          , _jsx('input', { value: invoiceNo, onChange: e => setInvoiceNo(e.target.value), className: "w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"         ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 319}, this )
         ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 317}, this)
-        , _jsxDEV('div', { children: [
-          _jsxDEV('label', { className: "block text-xs font-medium text-gray-600 mb-1"    , children: "Invoice Date *"  }, void 0, false, {fileName: _jsxFileName, lineNumber: 322}, this)
-          , _jsxDEV('input', { type: "date", value: invoiceDate, onChange: e => setInvoiceDate(e.target.value), className: "w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"         ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 323}, this )
+        , _jsx('div', { children: [
+          _jsx('label', { className: "block text-xs font-medium text-gray-600 mb-1"    , children: "Invoice Date *"  }, void 0, false, {fileName: _jsxFileName, lineNumber: 322}, this)
+          , _jsx('input', { type: "date", value: invoiceDate, onChange: e => setInvoiceDate(e.target.value), className: "w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"         ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 323}, this )
         ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 321}, this)
-        , _jsxDEV('div', { children: [
-          _jsxDEV('label', { className: "block text-xs font-medium text-gray-600 mb-1"    , children: "Due Date" }, void 0, false, {fileName: _jsxFileName, lineNumber: 326}, this)
-          , _jsxDEV('input', { type: "date", value: dueDate, onChange: e => setDueDate(e.target.value), className: "w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"         ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 327}, this )
+        , _jsx('div', { children: [
+          _jsx('label', { className: "block text-xs font-medium text-gray-600 mb-1"    , children: "Due Date" }, void 0, false, {fileName: _jsxFileName, lineNumber: 326}, this)
+          , _jsx('input', { type: "date", value: dueDate, onChange: e => setDueDate(e.target.value), className: "w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"         ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 327}, this )
         ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 325}, this)
       ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 316}, this)
 
       /* Customer + Shipping */
-      , _jsxDEV('div', { className: "bg-white rounded-xl shadow-sm p-5 grid grid-cols-1 md:grid-cols-2 gap-5"       , children: [
-        _jsxDEV('div', { className: "space-y-3", children: [
-          _jsxDEV('h3', { className: "font-semibold text-gray-700 text-sm"  , children: "Bill To" }, void 0, false, {fileName: _jsxFileName, lineNumber: 334}, this)
-          , _jsxDEV(CustomerSearch, { value: customerName, onChange: setCustomerName, onSelect: handleCustomerSelect,}, void 0, false, {fileName: _jsxFileName, lineNumber: 335}, this )
-          , _jsxDEV('input', { value: customerAddress, onChange: e => setCustomerAddress(e.target.value), placeholder: "Address", className: "w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"         ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 336}, this )
-          , _jsxDEV('input', { value: customerMobile, onChange: e => setCustomerMobile(e.target.value), placeholder: "Mobile", className: "w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"         ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 337}, this )
-          , _jsxDEV('input', { value: customerGstin, onChange: e => setCustomerGstin(e.target.value), placeholder: "GSTIN", className: "w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"         ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 338}, this )
+      , _jsx('div', { className: "bg-white rounded-xl shadow-sm p-5 grid grid-cols-1 md:grid-cols-2 gap-5"       , children: [
+        _jsx('div', { className: "space-y-3", children: [
+          _jsx('h3', { className: "font-semibold text-gray-700 text-sm"  , children: "Bill To" }, void 0, false, {fileName: _jsxFileName, lineNumber: 334}, this)
+          , _jsx(CustomerSearch, { value: customerName, onChange: setCustomerName, onSelect: handleCustomerSelect,}, void 0, false, {fileName: _jsxFileName, lineNumber: 335}, this )
+          , _jsx('input', { value: customerAddress, onChange: e => setCustomerAddress(e.target.value), placeholder: "Address", className: "w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"         ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 336}, this )
+          , _jsx('input', { value: customerMobile, onChange: e => setCustomerMobile(e.target.value), placeholder: "Mobile", className: "w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"         ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 337}, this )
+          , _jsx('input', { value: customerGstin, onChange: e => setCustomerGstin(e.target.value), placeholder: "GSTIN", className: "w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"         ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 338}, this )
         ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 333}, this)
-        , _jsxDEV('div', { className: "space-y-3", children: [
-          _jsxDEV('h3', { className: "font-semibold text-gray-700 text-sm"  , children: "Ship To / Transport"   }, void 0, false, {fileName: _jsxFileName, lineNumber: 341}, this)
-          , _jsxDEV('input', { value: shipTo, onChange: e => setShipTo(e.target.value), placeholder: "Ship To" , className: "w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"         ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 342}, this )
-          , _jsxDEV('input', { value: transportName, onChange: e => setTransportName(e.target.value), placeholder: "Transport Name" , className: "w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"         ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 343}, this )
-          , _jsxDEV('input', { value: vehicleNumber, onChange: e => setVehicleNumber(e.target.value), placeholder: "Vehicle Number" , className: "w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"         ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 344}, this )
+        , _jsx('div', { className: "space-y-3", children: [
+          _jsx('h3', { className: "font-semibold text-gray-700 text-sm"  , children: "Ship To / Transport"   }, void 0, false, {fileName: _jsxFileName, lineNumber: 341}, this)
+          , _jsx('input', { value: shipTo, onChange: e => setShipTo(e.target.value), placeholder: "Ship To" , className: "w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"         ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 342}, this )
+          , _jsx('input', { value: transportName, onChange: e => setTransportName(e.target.value), placeholder: "Transport Name" , className: "w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"         ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 343}, this )
+          , _jsx('input', { value: vehicleNumber, onChange: e => setVehicleNumber(e.target.value), placeholder: "Vehicle Number" , className: "w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"         ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 344}, this )
         ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 340}, this)
       ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 332}, this)
 
       /* Items table */
-      , _jsxDEV('div', { className: "bg-white rounded-xl shadow-sm p-5"   , children: [
-        _jsxDEV('h3', { className: "font-semibold text-gray-700 text-sm mb-3"   , children: "Items"}, void 0, false, {fileName: _jsxFileName, lineNumber: 350}, this)
-        , _jsxDEV('div', { className: "overflow-x-auto", children: 
-          _jsxDEV('table', { className: "w-full text-xs border-collapse"  , children: [
-            _jsxDEV('thead', { children: 
-              _jsxDEV('tr', { className: "bg-gray-50", children: [
-                _jsxDEV('th', { className: "border border-gray-200 px-2 py-2 text-left w-6"     , children: "#"}, void 0, false, {fileName: _jsxFileName, lineNumber: 355}, this)
-                , _jsxDEV('th', { className: "border border-gray-200 px-2 py-2 text-left"    , style: { minWidth: '200px' }, children: "Item Name" }, void 0, false, {fileName: _jsxFileName, lineNumber: 356}, this)
-                , _jsxDEV('th', { className: "border border-gray-200 px-2 py-2 text-left w-24"     , children: "HSN/SAC"}, void 0, false, {fileName: _jsxFileName, lineNumber: 357}, this)
-                , _jsxDEV('th', { className: "border border-gray-200 px-2 py-2 text-center w-16"     , children: "Qty"}, void 0, false, {fileName: _jsxFileName, lineNumber: 358}, this)
-                , _jsxDEV('th', { className: "border border-gray-200 px-2 py-2 text-center w-20"     , children: "Unit"}, void 0, false, {fileName: _jsxFileName, lineNumber: 359}, this)
-                , _jsxDEV('th', { className: "border border-gray-200 px-2 py-2 text-right w-20"     , children: "Price/Unit"}, void 0, false, {fileName: _jsxFileName, lineNumber: 360}, this)
-                , _jsxDEV('th', { className: "border border-gray-200 px-2 py-2 text-center w-16"     , children: "CGST%"}, void 0, false, {fileName: _jsxFileName, lineNumber: 361}, this)
-                , _jsxDEV('th', { className: "border border-gray-200 px-2 py-2 text-center w-16"     , children: "SGST%"}, void 0, false, {fileName: _jsxFileName, lineNumber: 362}, this)
-                , _jsxDEV('th', { className: "border border-gray-200 px-2 py-2 text-right w-24"     , children: "Taxable"}, void 0, false, {fileName: _jsxFileName, lineNumber: 363}, this)
-                , _jsxDEV('th', { className: "border border-gray-200 px-2 py-2 text-right w-24"     , children: "Amount"}, void 0, false, {fileName: _jsxFileName, lineNumber: 364}, this)
-                , _jsxDEV('th', { className: "border border-gray-200 px-2 py-2 w-8"    ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 365}, this)
+      , _jsx('div', { className: "bg-white rounded-xl shadow-sm p-5"   , children: [
+        _jsx('h3', { className: "font-semibold text-gray-700 text-sm mb-3"   , children: "Items"}, void 0, false, {fileName: _jsxFileName, lineNumber: 350}, this)
+        , _jsx('div', { className: "overflow-x-auto", children: 
+          _jsx('table', { className: "w-full text-xs border-collapse"  , children: [
+            _jsx('thead', { children: 
+              _jsx('tr', { className: "bg-gray-50", children: [
+                _jsx('th', { className: "border border-gray-200 px-2 py-2 text-left w-6"     , children: "#"}, void 0, false, {fileName: _jsxFileName, lineNumber: 355}, this)
+                , _jsx('th', { className: "border border-gray-200 px-2 py-2 text-left"    , style: { minWidth: '200px' }, children: "Item Name" }, void 0, false, {fileName: _jsxFileName, lineNumber: 356}, this)
+                , _jsx('th', { className: "border border-gray-200 px-2 py-2 text-left w-24"     , children: "HSN/SAC"}, void 0, false, {fileName: _jsxFileName, lineNumber: 357}, this)
+                , _jsx('th', { className: "border border-gray-200 px-2 py-2 text-center w-16"     , children: "Qty"}, void 0, false, {fileName: _jsxFileName, lineNumber: 358}, this)
+                , _jsx('th', { className: "border border-gray-200 px-2 py-2 text-center w-20"     , children: "Unit"}, void 0, false, {fileName: _jsxFileName, lineNumber: 359}, this)
+                , _jsx('th', { className: "border border-gray-200 px-2 py-2 text-right w-20"     , children: "Price/Unit"}, void 0, false, {fileName: _jsxFileName, lineNumber: 360}, this)
+                , _jsx('th', { className: "border border-gray-200 px-2 py-2 text-center w-16"     , children: "CGST%"}, void 0, false, {fileName: _jsxFileName, lineNumber: 361}, this)
+                , _jsx('th', { className: "border border-gray-200 px-2 py-2 text-center w-16"     , children: "SGST%"}, void 0, false, {fileName: _jsxFileName, lineNumber: 362}, this)
+                , _jsx('th', { className: "border border-gray-200 px-2 py-2 text-right w-24"     , children: "Taxable"}, void 0, false, {fileName: _jsxFileName, lineNumber: 363}, this)
+                , _jsx('th', { className: "border border-gray-200 px-2 py-2 text-right w-24"     , children: "Amount"}, void 0, false, {fileName: _jsxFileName, lineNumber: 364}, this)
+                , _jsx('th', { className: "border border-gray-200 px-2 py-2 w-8"    ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 365}, this)
               ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 354}, this)
             }, void 0, false, {fileName: _jsxFileName, lineNumber: 353}, this)
-            , _jsxDEV('tbody', { children: 
+            , _jsx('tbody', { children: 
               items.map((item, idx) => (
-                _jsxDEV('tr', { className: "hover:bg-gray-50", children: [
-                  _jsxDEV('td', { className: "border border-gray-200 px-2 py-1.5 text-center text-gray-500"     , children: idx + 1}, void 0, false, {fileName: _jsxFileName, lineNumber: 371}, this)
-                  , _jsxDEV('td', { className: "border border-gray-200 px-1 py-1"   , children: 
-                    _jsxDEV(ProductSearch, {
+                _jsx('tr', { className: "hover:bg-gray-50", children: [
+                  _jsx('td', { className: "border border-gray-200 px-2 py-1.5 text-center text-gray-500"     , children: idx + 1}, void 0, false, {fileName: _jsxFileName, lineNumber: 371}, this)
+                  , _jsx('td', { className: "border border-gray-200 px-1 py-1"   , children: 
+                    _jsx(ProductSearch, {
                       value: item.item_name,
                       onChange: val => updateItem(idx, 'item_name', val),
                       onSelect: p => handleProductSelect(p, idx),}, void 0, false, {fileName: _jsxFileName, lineNumber: 373}, this
                     )
                   }, void 0, false, {fileName: _jsxFileName, lineNumber: 372}, this)
-                  , _jsxDEV('td', { className: "border border-gray-200 px-1 py-1"   , children: 
-                    _jsxDEV('input', { value: item.hsn_code, onChange: e => updateItem(idx, 'hsn_code', e.target.value),
+                  , _jsx('td', { className: "border border-gray-200 px-1 py-1"   , children: 
+                    _jsx('input', { value: item.hsn_code, onChange: e => updateItem(idx, 'hsn_code', e.target.value),
                       className: "w-full border border-gray-200 rounded px-2 py-1 text-xs focus:outline-none focus:ring-1 focus:ring-sky-400"         ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 380}, this )
                   }, void 0, false, {fileName: _jsxFileName, lineNumber: 379}, this)
-                  , _jsxDEV('td', { className: "border border-gray-200 px-1 py-1"   , children: 
-                    _jsxDEV('input', { type: "number", value: item.quantity, onChange: e => updateItem(idx, 'quantity', parseFloat(e.target.value) || 0),
+                  , _jsx('td', { className: "border border-gray-200 px-1 py-1"   , children: 
+                    _jsx('input', { type: "number", value: item.quantity, onChange: e => updateItem(idx, 'quantity', parseFloat(e.target.value) || 0),
                       className: "w-full border border-gray-200 rounded px-2 py-1 text-xs text-right focus:outline-none focus:ring-1 focus:ring-sky-400"          ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 384}, this )
                   }, void 0, false, {fileName: _jsxFileName, lineNumber: 383}, this)
-                  , _jsxDEV('td', { className: "border border-gray-200 px-1 py-1"   , children: 
-                    _jsxDEV('input', { value: item.unit, onChange: e => updateItem(idx, 'unit', e.target.value),
+                  , _jsx('td', { className: "border border-gray-200 px-1 py-1"   , children: 
+                    _jsx('input', { value: item.unit, onChange: e => updateItem(idx, 'unit', e.target.value),
                       className: "w-full border border-gray-200 rounded px-2 py-1 text-xs focus:outline-none focus:ring-1 focus:ring-sky-400"         ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 388}, this )
                   }, void 0, false, {fileName: _jsxFileName, lineNumber: 387}, this)
-                  , _jsxDEV('td', { className: "border border-gray-200 px-1 py-1"   , children: 
-                    _jsxDEV('input', { type: "number", value: item.price_per_unit, onChange: e => updateItem(idx, 'price_per_unit', parseFloat(e.target.value) || 0),
+                  , _jsx('td', { className: "border border-gray-200 px-1 py-1"   , children: 
+                    _jsx('input', { type: "number", value: item.price_per_unit, onChange: e => updateItem(idx, 'price_per_unit', parseFloat(e.target.value) || 0),
                       className: "w-full border border-gray-200 rounded px-2 py-1 text-xs text-right focus:outline-none focus:ring-1 focus:ring-sky-400"          ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 392}, this )
                   }, void 0, false, {fileName: _jsxFileName, lineNumber: 391}, this)
-                  , _jsxDEV('td', { className: "border border-gray-200 px-1 py-1"   , children: 
-                    _jsxDEV('input', { type: "number", value: item.cgst_rate, onChange: e => updateItem(idx, 'cgst_rate', parseFloat(e.target.value) || 0),
+                  , _jsx('td', { className: "border border-gray-200 px-1 py-1"   , children: 
+                    _jsx('input', { type: "number", value: item.cgst_rate, onChange: e => updateItem(idx, 'cgst_rate', parseFloat(e.target.value) || 0),
                       className: "w-full border border-gray-200 rounded px-2 py-1 text-xs text-center focus:outline-none focus:ring-1 focus:ring-sky-400"          ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 396}, this )
                   }, void 0, false, {fileName: _jsxFileName, lineNumber: 395}, this)
-                  , _jsxDEV('td', { className: "border border-gray-200 px-1 py-1"   , children: 
-                    _jsxDEV('input', { type: "number", value: item.sgst_rate, onChange: e => updateItem(idx, 'sgst_rate', parseFloat(e.target.value) || 0),
+                  , _jsx('td', { className: "border border-gray-200 px-1 py-1"   , children: 
+                    _jsx('input', { type: "number", value: item.sgst_rate, onChange: e => updateItem(idx, 'sgst_rate', parseFloat(e.target.value) || 0),
                       className: "w-full border border-gray-200 rounded px-2 py-1 text-xs text-center focus:outline-none focus:ring-1 focus:ring-sky-400"          ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 400}, this )
                   }, void 0, false, {fileName: _jsxFileName, lineNumber: 399}, this)
-                  , _jsxDEV('td', { className: "border border-gray-200 px-2 py-1 text-right text-gray-600"     , children: ["₹", formatCurrency(item.taxable_amount)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 403}, this)
-                  , _jsxDEV('td', { className: "border border-gray-200 px-2 py-1 text-right font-medium"     , children: ["₹", formatCurrency(item.amount)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 404}, this)
-                  , _jsxDEV('td', { className: "border border-gray-200 px-1 py-1 text-center"    , children: 
-                    _jsxDEV('button', { onClick: () => removeRow(idx), className: "text-rose-400 hover:text-rose-600 transition-colors"  , children: 
-                      _jsxDEV(Trash2, { className: "w-3.5 h-3.5" ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 407}, this )
+                  , _jsx('td', { className: "border border-gray-200 px-2 py-1 text-right text-gray-600"     , children: ["₹", formatCurrency(item.taxable_amount)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 403}, this)
+                  , _jsx('td', { className: "border border-gray-200 px-2 py-1 text-right font-medium"     , children: ["₹", formatCurrency(item.amount)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 404}, this)
+                  , _jsx('td', { className: "border border-gray-200 px-1 py-1 text-center"    , children: 
+                    _jsx('button', { onClick: () => removeRow(idx), className: "text-rose-400 hover:text-rose-600 transition-colors"  , children: 
+                      _jsx(Trash2, { className: "w-3.5 h-3.5" ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 407}, this )
                     }, void 0, false, {fileName: _jsxFileName, lineNumber: 406}, this)
                   }, void 0, false, {fileName: _jsxFileName, lineNumber: 405}, this)
                 ]}, idx, true, {fileName: _jsxFileName, lineNumber: 370}, this)
@@ -466,93 +466,93 @@ export default function InvoiceForm() {
             }, void 0, false, {fileName: _jsxFileName, lineNumber: 368}, this)
           ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 352}, this)
         }, void 0, false, {fileName: _jsxFileName, lineNumber: 351}, this)
-        , _jsxDEV('button', { onClick: addRow, className: "mt-3 flex items-center gap-1.5 text-sky-600 hover:text-sky-700 text-sm font-medium transition-colors"        , children: [
-          _jsxDEV(Plus, { className: "w-4 h-4" ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 416}, this ), " Add Item"
+        , _jsx('button', { onClick: addRow, className: "mt-3 flex items-center gap-1.5 text-sky-600 hover:text-sky-700 text-sm font-medium transition-colors"        , children: [
+          _jsx(Plus, { className: "w-4 h-4" ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 416}, this ), " Add Item"
         ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 415}, this)
       ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 349}, this)
 
       /* Totals + Payment */
-      , _jsxDEV('div', { className: "grid md:grid-cols-2 gap-4"  , children: [
-        _jsxDEV('div', { className: "bg-white rounded-xl shadow-sm p-5"   , children: [
-          _jsxDEV('h3', { className: "font-semibold text-gray-700 text-sm mb-3"   , children: "Payment"}, void 0, false, {fileName: _jsxFileName, lineNumber: 423}, this)
-          , _jsxDEV('div', { className: "space-y-3", children: [
-            _jsxDEV('div', { children: [
-              _jsxDEV('label', { className: "block text-xs font-medium text-gray-600 mb-1"    , children: "Payment Mode" }, void 0, false, {fileName: _jsxFileName, lineNumber: 426}, this)
-              , _jsxDEV('select', { value: paymentMode, onChange: e => setPaymentMode(e.target.value),
+      , _jsx('div', { className: "grid md:grid-cols-2 gap-4"  , children: [
+        _jsx('div', { className: "bg-white rounded-xl shadow-sm p-5"   , children: [
+          _jsx('h3', { className: "font-semibold text-gray-700 text-sm mb-3"   , children: "Payment"}, void 0, false, {fileName: _jsxFileName, lineNumber: 423}, this)
+          , _jsx('div', { className: "space-y-3", children: [
+            _jsx('div', { children: [
+              _jsx('label', { className: "block text-xs font-medium text-gray-600 mb-1"    , children: "Payment Mode" }, void 0, false, {fileName: _jsxFileName, lineNumber: 426}, this)
+              , _jsx('select', { value: paymentMode, onChange: e => setPaymentMode(e.target.value),
                 className: "w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"         , children: [
-                _jsxDEV('option', { children: "Credit"}, void 0, false, {fileName: _jsxFileName, lineNumber: 429}, this), _jsxDEV('option', { children: "Cash"}, void 0, false, {fileName: _jsxFileName, lineNumber: 429}, this), _jsxDEV('option', { children: "UPI"}, void 0, false, {fileName: _jsxFileName, lineNumber: 429}, this)
-                , _jsxDEV('option', { children: "Bank Transfer" }, void 0, false, {fileName: _jsxFileName, lineNumber: 430}, this), _jsxDEV('option', { children: "Cheque"}, void 0, false, {fileName: _jsxFileName, lineNumber: 430}, this)
+                _jsx('option', { children: "Credit"}, void 0, false, {fileName: _jsxFileName, lineNumber: 429}, this), _jsx('option', { children: "Cash"}, void 0, false, {fileName: _jsxFileName, lineNumber: 429}, this), _jsx('option', { children: "UPI"}, void 0, false, {fileName: _jsxFileName, lineNumber: 429}, this)
+                , _jsx('option', { children: "Bank Transfer" }, void 0, false, {fileName: _jsxFileName, lineNumber: 430}, this), _jsx('option', { children: "Cheque"}, void 0, false, {fileName: _jsxFileName, lineNumber: 430}, this)
               ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 427}, this)
             ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 425}, this)
-            , _jsxDEV('div', { children: [
-              _jsxDEV('label', { className: "block text-xs font-medium text-gray-600 mb-1"    , children: "Amount Received (₹)"  }, void 0, false, {fileName: _jsxFileName, lineNumber: 434}, this)
-              , _jsxDEV('input', { type: "number", value: receivedAmount, onChange: e => setReceivedAmount(parseFloat(e.target.value) || 0),
+            , _jsx('div', { children: [
+              _jsx('label', { className: "block text-xs font-medium text-gray-600 mb-1"    , children: "Amount Received (₹)"  }, void 0, false, {fileName: _jsxFileName, lineNumber: 434}, this)
+              , _jsx('input', { type: "number", value: receivedAmount, onChange: e => setReceivedAmount(parseFloat(e.target.value) || 0),
                 className: "w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"         ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 435}, this )
             ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 433}, this)
-            , _jsxDEV('div', { className: "text-xs text-gray-500 italic"  , children: 
+            , _jsx('div', { className: "text-xs text-gray-500 italic"  , children: 
               numberToWords(grandTotal)
             }, void 0, false, {fileName: _jsxFileName, lineNumber: 438}, this)
           ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 424}, this)
         ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 422}, this)
 
-        , _jsxDEV('div', { className: "bg-white rounded-xl shadow-sm p-5"   , children: [
-          _jsxDEV('h3', { className: "font-semibold text-gray-700 text-sm mb-3"   , children: "Summary"}, void 0, false, {fileName: _jsxFileName, lineNumber: 445}, this)
-          , _jsxDEV('div', { className: "space-y-2 text-sm" , children: [
-            _jsxDEV('div', { className: "flex justify-between text-gray-600"  , children: [
-              _jsxDEV('span', { children: "Taxable Amount" }, void 0, false, {fileName: _jsxFileName, lineNumber: 448}, this), _jsxDEV('span', { children: ["₹", formatCurrency(taxableTotal)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 448}, this)
+        , _jsx('div', { className: "bg-white rounded-xl shadow-sm p-5"   , children: [
+          _jsx('h3', { className: "font-semibold text-gray-700 text-sm mb-3"   , children: "Summary"}, void 0, false, {fileName: _jsxFileName, lineNumber: 445}, this)
+          , _jsx('div', { className: "space-y-2 text-sm" , children: [
+            _jsx('div', { className: "flex justify-between text-gray-600"  , children: [
+              _jsx('span', { children: "Taxable Amount" }, void 0, false, {fileName: _jsxFileName, lineNumber: 448}, this), _jsx('span', { children: ["₹", formatCurrency(taxableTotal)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 448}, this)
             ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 447}, this)
-            , _jsxDEV('div', { className: "flex justify-between text-gray-600"  , children: [
-              _jsxDEV('span', { children: "CGST"}, void 0, false, {fileName: _jsxFileName, lineNumber: 451}, this), _jsxDEV('span', { children: ["₹", formatCurrency(cgstTotal)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 451}, this)
+            , _jsx('div', { className: "flex justify-between text-gray-600"  , children: [
+              _jsx('span', { children: "CGST"}, void 0, false, {fileName: _jsxFileName, lineNumber: 451}, this), _jsx('span', { children: ["₹", formatCurrency(cgstTotal)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 451}, this)
             ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 450}, this)
-            , _jsxDEV('div', { className: "flex justify-between text-gray-600"  , children: [
-              _jsxDEV('span', { children: "SGST"}, void 0, false, {fileName: _jsxFileName, lineNumber: 454}, this), _jsxDEV('span', { children: ["₹", formatCurrency(sgstTotal)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 454}, this)
+            , _jsx('div', { className: "flex justify-between text-gray-600"  , children: [
+              _jsx('span', { children: "SGST"}, void 0, false, {fileName: _jsxFileName, lineNumber: 454}, this), _jsx('span', { children: ["₹", formatCurrency(sgstTotal)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 454}, this)
             ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 453}, this)
-            , _jsxDEV('div', { className: "flex justify-between text-gray-600"  , children: [
-              _jsxDEV('span', { children: "Sub Total" }, void 0, false, {fileName: _jsxFileName, lineNumber: 457}, this), _jsxDEV('span', { children: ["₹", formatCurrency(subTotal)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 457}, this)
+            , _jsx('div', { className: "flex justify-between text-gray-600"  , children: [
+              _jsx('span', { children: "Sub Total" }, void 0, false, {fileName: _jsxFileName, lineNumber: 457}, this), _jsx('span', { children: ["₹", formatCurrency(subTotal)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 457}, this)
             ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 456}, this)
-            , _jsxDEV('div', { className: "flex justify-between text-gray-600"  , children: [
-              _jsxDEV('span', { children: "Round Off" }, void 0, false, {fileName: _jsxFileName, lineNumber: 460}, this), _jsxDEV('span', { children: ["₹", formatCurrency(roundOff)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 460}, this)
+            , _jsx('div', { className: "flex justify-between text-gray-600"  , children: [
+              _jsx('span', { children: "Round Off" }, void 0, false, {fileName: _jsxFileName, lineNumber: 460}, this), _jsx('span', { children: ["₹", formatCurrency(roundOff)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 460}, this)
             ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 459}, this)
-            , _jsxDEV('div', { className: "flex justify-between font-bold text-gray-800 text-base border-t pt-2"      , children: [
-              _jsxDEV('span', { children: "Grand Total" }, void 0, false, {fileName: _jsxFileName, lineNumber: 463}, this), _jsxDEV('span', { children: ["₹", formatCurrency(grandTotal)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 463}, this)
+            , _jsx('div', { className: "flex justify-between font-bold text-gray-800 text-base border-t pt-2"      , children: [
+              _jsx('span', { children: "Grand Total" }, void 0, false, {fileName: _jsxFileName, lineNumber: 463}, this), _jsx('span', { children: ["₹", formatCurrency(grandTotal)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 463}, this)
             ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 462}, this)
-            , _jsxDEV('div', { className: "flex justify-between text-gray-600"  , children: [
-              _jsxDEV('span', { children: "Received"}, void 0, false, {fileName: _jsxFileName, lineNumber: 466}, this), _jsxDEV('span', { children: ["₹", formatCurrency(receivedAmount)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 466}, this)
+            , _jsx('div', { className: "flex justify-between text-gray-600"  , children: [
+              _jsx('span', { children: "Received"}, void 0, false, {fileName: _jsxFileName, lineNumber: 466}, this), _jsx('span', { children: ["₹", formatCurrency(receivedAmount)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 466}, this)
             ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 465}, this)
-            , _jsxDEV('div', { className: "flex justify-between font-semibold text-amber-600"   , children: [
-              _jsxDEV('span', { children: "Balance Due" }, void 0, false, {fileName: _jsxFileName, lineNumber: 469}, this), _jsxDEV('span', { children: ["₹", formatCurrency(grandTotal - receivedAmount)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 469}, this)
+            , _jsx('div', { className: "flex justify-between font-semibold text-amber-600"   , children: [
+              _jsx('span', { children: "Balance Due" }, void 0, false, {fileName: _jsxFileName, lineNumber: 469}, this), _jsx('span', { children: ["₹", formatCurrency(grandTotal - receivedAmount)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 469}, this)
             ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 468}, this)
           ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 446}, this)
         ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 444}, this)
       ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 421}, this)
 
       /* Hidden print area */
-      , _jsxDEV('div', { className: "hidden print:block" , children: 
-        _jsxDEV(InvoicePrint, { ref: printRef, invoice: currentInvoice, settings: settings,}, void 0, false, {fileName: _jsxFileName, lineNumber: 477}, this )
+      , _jsx('div', { className: "hidden print:block" , children: 
+        _jsx(InvoicePrint, { ref: printRef, invoice: currentInvoice, settings: settings,}, void 0, false, {fileName: _jsxFileName, lineNumber: 477}, this )
       }, void 0, false, {fileName: _jsxFileName, lineNumber: 476}, this)
-      , _jsxDEV('div', { style: { position: 'absolute', left: '-9999px', top: 0 }, children: 
-        _jsxDEV(InvoicePrint, { ref: printRef, invoice: currentInvoice, settings: settings,}, void 0, false, {fileName: _jsxFileName, lineNumber: 480}, this )
+      , _jsx('div', { style: { position: 'absolute', left: '-9999px', top: 0 }, children: 
+        _jsx(InvoicePrint, { ref: printRef, invoice: currentInvoice, settings: settings,}, void 0, false, {fileName: _jsxFileName, lineNumber: 480}, this )
       }, void 0, false, {fileName: _jsxFileName, lineNumber: 479}, this)
 
       /* Preview Modal */
       , previewOpen && (
-        _jsxDEV('div', { className: "fixed inset-0 bg-black/60 z-50 flex items-start justify-center p-4 overflow-y-auto"        , children: 
-          _jsxDEV('div', { className: "bg-white rounded-xl shadow-2xl w-full max-w-5xl"    , children: [
-            _jsxDEV('div', { className: "flex items-center justify-between p-4 border-b"    , children: [
-              _jsxDEV('h2', { className: "font-bold text-gray-800" , children: "Invoice Preview" }, void 0, false, {fileName: _jsxFileName, lineNumber: 488}, this)
-              , _jsxDEV('div', { className: "flex gap-2" , children: [
-                _jsxDEV('button', { onClick: () => { handlePrint(); setPreviewOpen(false); },
+        _jsx('div', { className: "fixed inset-0 bg-black/60 z-50 flex items-start justify-center p-4 overflow-y-auto"        , children: 
+          _jsx('div', { className: "bg-white rounded-xl shadow-2xl w-full max-w-5xl"    , children: [
+            _jsx('div', { className: "flex items-center justify-between p-4 border-b"    , children: [
+              _jsx('h2', { className: "font-bold text-gray-800" , children: "Invoice Preview" }, void 0, false, {fileName: _jsxFileName, lineNumber: 488}, this)
+              , _jsx('div', { className: "flex gap-2" , children: [
+                _jsx('button', { onClick: () => { handlePrint(); setPreviewOpen(false); },
                   className: "flex items-center gap-1.5 px-3 py-1.5 bg-sky-600 text-white rounded-lg text-sm"        , children: [
-                  _jsxDEV(Printer, { className: "w-4 h-4" ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 492}, this ), " Print"
+                  _jsx(Printer, { className: "w-4 h-4" ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 492}, this ), " Print"
                 ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 490}, this)
-                , _jsxDEV('button', { onClick: () => setPreviewOpen(false), className: "p-1.5 hover:bg-gray-100 rounded-lg"  , children: 
-                  _jsxDEV(X, { className: "w-5 h-5" ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 495}, this )
+                , _jsx('button', { onClick: () => setPreviewOpen(false), className: "p-1.5 hover:bg-gray-100 rounded-lg"  , children: 
+                  _jsx(X, { className: "w-5 h-5" ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 495}, this )
                 }, void 0, false, {fileName: _jsxFileName, lineNumber: 494}, this)
               ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 489}, this)
             ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 487}, this)
-            , _jsxDEV('div', { className: "p-4 overflow-x-auto bg-gray-100"  , children: 
-              _jsxDEV('div', { className: "border border-gray-300 inline-block"  , children: 
-                _jsxDEV(InvoiceCopyPreview, { invoice: currentInvoice, settings: settings,}, void 0, false, {fileName: _jsxFileName, lineNumber: 501}, this )
+            , _jsx('div', { className: "p-4 overflow-x-auto bg-gray-100"  , children: 
+              _jsx('div', { className: "border border-gray-300 inline-block"  , children: 
+                _jsx(InvoiceCopyPreview, { invoice: currentInvoice, settings: settings,}, void 0, false, {fileName: _jsxFileName, lineNumber: 501}, this )
               }, void 0, false, {fileName: _jsxFileName, lineNumber: 500}, this)
             }, void 0, false, {fileName: _jsxFileName, lineNumber: 499}, this)
           ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 486}, this)
@@ -584,106 +584,106 @@ function InvoiceCopyPreview({ invoice, settings }) {
   const totalQty = items.reduce((s, i) => s + i.quantity, 0);
 
   return (
-    _jsxDEV('div', { style: { fontFamily: 'Arial, sans-serif', fontSize: '11px', color: '#000', width: '210mm', padding: '6mm 8mm', boxSizing: 'border-box', backgroundColor: '#fff' }, children: [
-      _jsxDEV('div', { style: { display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }, children: [
-        _jsxDEV('div', { style: { flex: 1 },}, void 0, false, {fileName: _jsxFileName, lineNumber: 535}, this )
-        , _jsxDEV('div', { style: { flex: 1, textAlign: 'center', fontWeight: 'bold', fontSize: '13px' }, children: "Tax Invoice" }, void 0, false, {fileName: _jsxFileName, lineNumber: 536}, this)
-        , _jsxDEV('div', { style: { flex: 1, textAlign: 'right', fontSize: '10px', color: '#555' }, children: "ORIGINAL FOR RECIPIENT"  }, void 0, false, {fileName: _jsxFileName, lineNumber: 537}, this)
+    _jsx('div', { style: { fontFamily: 'Arial, sans-serif', fontSize: '11px', color: '#000', width: '210mm', padding: '6mm 8mm', boxSizing: 'border-box', backgroundColor: '#fff' }, children: [
+      _jsx('div', { style: { display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }, children: [
+        _jsx('div', { style: { flex: 1 },}, void 0, false, {fileName: _jsxFileName, lineNumber: 535}, this )
+        , _jsx('div', { style: { flex: 1, textAlign: 'center', fontWeight: 'bold', fontSize: '13px' }, children: "Tax Invoice" }, void 0, false, {fileName: _jsxFileName, lineNumber: 536}, this)
+        , _jsx('div', { style: { flex: 1, textAlign: 'right', fontSize: '10px', color: '#555' }, children: "ORIGINAL FOR RECIPIENT"  }, void 0, false, {fileName: _jsxFileName, lineNumber: 537}, this)
       ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 534}, this)
-      , _jsxDEV('div', { style: { display: 'flex', alignItems: 'flex-start', borderBottom: '1px solid #000', paddingBottom: '4px' }, children: [
-        _jsxDEV('div', { style: { marginRight: '10px', width: '52px', height: '52px', flexShrink: 0 }, children: 
-          settings.logo_url ? _jsxDEV('img', { src: settings.logo_url, alt: "logo", style: { width: '52px', height: '52px', objectFit: 'contain' },}, void 0, false, {fileName: _jsxFileName, lineNumber: 541}, this ) : _jsxDEV('div', { style: { width: '52px', height: '52px', background: '#e0f2fe', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '4px' }, children: _jsxDEV('span', { style: { fontSize: '20px' }, children: "🥛"}, void 0, false, {fileName: _jsxFileName, lineNumber: 541}, this)}, void 0, false, {fileName: _jsxFileName, lineNumber: 541}, this)
+      , _jsx('div', { style: { display: 'flex', alignItems: 'flex-start', borderBottom: '1px solid #000', paddingBottom: '4px' }, children: [
+        _jsx('div', { style: { marginRight: '10px', width: '52px', height: '52px', flexShrink: 0 }, children: 
+          settings.logo_url ? _jsx('img', { src: settings.logo_url, alt: "logo", style: { width: '52px', height: '52px', objectFit: 'contain' },}, void 0, false, {fileName: _jsxFileName, lineNumber: 541}, this ) : _jsx('div', { style: { width: '52px', height: '52px', background: '#e0f2fe', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '4px' }, children: _jsx('span', { style: { fontSize: '20px' }, children: "🥛"}, void 0, false, {fileName: _jsxFileName, lineNumber: 541}, this)}, void 0, false, {fileName: _jsxFileName, lineNumber: 541}, this)
         }, void 0, false, {fileName: _jsxFileName, lineNumber: 540}, this)
-        , _jsxDEV('div', { style: { flex: 1, textAlign: 'right' }, children: [
-          _jsxDEV('div', { style: { fontWeight: 'bold', fontSize: '18px' }, children: settings.business_name}, void 0, false, {fileName: _jsxFileName, lineNumber: 544}, this)
-          , _jsxDEV('div', { style: { fontSize: '10px' }, children: settings.address}, void 0, false, {fileName: _jsxFileName, lineNumber: 545}, this)
-          , _jsxDEV('div', { style: { fontSize: '10px' }, children: ["Phone no.: "  , settings.phone, " Email: "  , settings.email]}, void 0, true, {fileName: _jsxFileName, lineNumber: 546}, this)
-          , _jsxDEV('div', { style: { fontSize: '10px' }, children: ["GSTIN: " , settings.gstin, ", State: "  , settings.state]}, void 0, true, {fileName: _jsxFileName, lineNumber: 547}, this)
+        , _jsx('div', { style: { flex: 1, textAlign: 'right' }, children: [
+          _jsx('div', { style: { fontWeight: 'bold', fontSize: '18px' }, children: settings.business_name}, void 0, false, {fileName: _jsxFileName, lineNumber: 544}, this)
+          , _jsx('div', { style: { fontSize: '10px' }, children: settings.address}, void 0, false, {fileName: _jsxFileName, lineNumber: 545}, this)
+          , _jsx('div', { style: { fontSize: '10px' }, children: ["Phone no.: "  , settings.phone, " Email: "  , settings.email]}, void 0, true, {fileName: _jsxFileName, lineNumber: 546}, this)
+          , _jsx('div', { style: { fontSize: '10px' }, children: ["GSTIN: " , settings.gstin, ", State: "  , settings.state]}, void 0, true, {fileName: _jsxFileName, lineNumber: 547}, this)
         ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 543}, this)
       ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 539}, this)
-      , _jsxDEV('table', { style: { width: '100%', borderCollapse: 'collapse', border: '1px solid #000' }, children: 
-        _jsxDEV('tbody', { children: [
-          _jsxDEV('tr', { children: [
-            _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 5px', width: '25%', fontWeight: 'bold', backgroundColor: '#f3f3f3' }, children: "Bill To" }, void 0, false, {fileName: _jsxFileName, lineNumber: 553}, this)
-            , _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 5px', width: '25%', fontWeight: 'bold', backgroundColor: '#f3f3f3' }, children: "Ship To" }, void 0, false, {fileName: _jsxFileName, lineNumber: 554}, this)
-            , _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 5px', width: '25%', fontWeight: 'bold', backgroundColor: '#f3f3f3' }, children: "Transportation Details" }, void 0, false, {fileName: _jsxFileName, lineNumber: 555}, this)
-            , _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 5px', width: '25%', fontWeight: 'bold', backgroundColor: '#f3f3f3', textAlign: 'right' }, children: "Invoice Details" }, void 0, false, {fileName: _jsxFileName, lineNumber: 556}, this)
+      , _jsx('table', { style: { width: '100%', borderCollapse: 'collapse', border: '1px solid #000' }, children: 
+        _jsx('tbody', { children: [
+          _jsx('tr', { children: [
+            _jsx('td', { style: { border: '1px solid #000', padding: '3px 5px', width: '25%', fontWeight: 'bold', backgroundColor: '#f3f3f3' }, children: "Bill To" }, void 0, false, {fileName: _jsxFileName, lineNumber: 553}, this)
+            , _jsx('td', { style: { border: '1px solid #000', padding: '3px 5px', width: '25%', fontWeight: 'bold', backgroundColor: '#f3f3f3' }, children: "Ship To" }, void 0, false, {fileName: _jsxFileName, lineNumber: 554}, this)
+            , _jsx('td', { style: { border: '1px solid #000', padding: '3px 5px', width: '25%', fontWeight: 'bold', backgroundColor: '#f3f3f3' }, children: "Transportation Details" }, void 0, false, {fileName: _jsxFileName, lineNumber: 555}, this)
+            , _jsx('td', { style: { border: '1px solid #000', padding: '3px 5px', width: '25%', fontWeight: 'bold', backgroundColor: '#f3f3f3', textAlign: 'right' }, children: "Invoice Details" }, void 0, false, {fileName: _jsxFileName, lineNumber: 556}, this)
           ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 552}, this)
-          , _jsxDEV('tr', { children: [
-            _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 5px', verticalAlign: 'top' }, children: [_jsxDEV('div', { style: { fontWeight: 'bold' }, children: invoice.customer_name}, void 0, false, {fileName: _jsxFileName, lineNumber: 559}, this), _jsxDEV('div', { children: invoice.customer_address}, void 0, false, {fileName: _jsxFileName, lineNumber: 559}, this), _jsxDEV('div', { children: invoice.customer_mobile}, void 0, false, {fileName: _jsxFileName, lineNumber: 559}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 559}, this)
-            , _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 5px', verticalAlign: 'top' }, children: invoice.ship_to}, void 0, false, {fileName: _jsxFileName, lineNumber: 560}, this)
-            , _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 5px', verticalAlign: 'top' }, children: [_jsxDEV('div', { children: ["Transport Name: "  , invoice.transport_name]}, void 0, true, {fileName: _jsxFileName, lineNumber: 561}, this), _jsxDEV('div', { children: ["Vehicle Number: "  , invoice.vehicle_number]}, void 0, true, {fileName: _jsxFileName, lineNumber: 561}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 561}, this)
-            , _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 5px', verticalAlign: 'top', textAlign: 'right' }, children: [_jsxDEV('div', { children: ["Invoice No. : "   , invoice.invoice_no]}, void 0, true, {fileName: _jsxFileName, lineNumber: 562}, this), _jsxDEV('div', { children: ["Date : "  , formatDate(invoice.invoice_date)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 562}, this), _jsxDEV('div', { children: ["Due Date : "   , formatDate(invoice.due_date)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 562}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 562}, this)
+          , _jsx('tr', { children: [
+            _jsx('td', { style: { border: '1px solid #000', padding: '3px 5px', verticalAlign: 'top' }, children: [_jsx('div', { style: { fontWeight: 'bold' }, children: invoice.customer_name}, void 0, false, {fileName: _jsxFileName, lineNumber: 559}, this), _jsx('div', { children: invoice.customer_address}, void 0, false, {fileName: _jsxFileName, lineNumber: 559}, this), _jsx('div', { children: invoice.customer_mobile}, void 0, false, {fileName: _jsxFileName, lineNumber: 559}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 559}, this)
+            , _jsx('td', { style: { border: '1px solid #000', padding: '3px 5px', verticalAlign: 'top' }, children: invoice.ship_to}, void 0, false, {fileName: _jsxFileName, lineNumber: 560}, this)
+            , _jsx('td', { style: { border: '1px solid #000', padding: '3px 5px', verticalAlign: 'top' }, children: [_jsx('div', { children: ["Transport Name: "  , invoice.transport_name]}, void 0, true, {fileName: _jsxFileName, lineNumber: 561}, this), _jsx('div', { children: ["Vehicle Number: "  , invoice.vehicle_number]}, void 0, true, {fileName: _jsxFileName, lineNumber: 561}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 561}, this)
+            , _jsx('td', { style: { border: '1px solid #000', padding: '3px 5px', verticalAlign: 'top', textAlign: 'right' }, children: [_jsx('div', { children: ["Invoice No. : "   , invoice.invoice_no]}, void 0, true, {fileName: _jsxFileName, lineNumber: 562}, this), _jsx('div', { children: ["Date : "  , formatDate(invoice.invoice_date)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 562}, this), _jsx('div', { children: ["Due Date : "   , formatDate(invoice.due_date)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 562}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 562}, this)
           ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 558}, this)
         ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 551}, this)
       }, void 0, false, {fileName: _jsxFileName, lineNumber: 550}, this)
-      , _jsxDEV('table', { style: { width: '100%', borderCollapse: 'collapse', border: '1px solid #000', borderTop: 'none' }, children: [
-        _jsxDEV('thead', { children: 
-          _jsxDEV('tr', { style: { backgroundColor: '#f3f3f3' }, children: [
-            _jsxDEV('th', { style: { border: '1px solid #000', padding: '3px 4px', width: '4%' }, children: "#"}, void 0, false, {fileName: _jsxFileName, lineNumber: 569}, this)
-            , _jsxDEV('th', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'left', width: '22%' }, children: "Item name" }, void 0, false, {fileName: _jsxFileName, lineNumber: 570}, this)
-            , _jsxDEV('th', { style: { border: '1px solid #000', padding: '3px 4px', width: '9%' }, children: "HSN/SAC"}, void 0, false, {fileName: _jsxFileName, lineNumber: 571}, this)
-            , _jsxDEV('th', { style: { border: '1px solid #000', padding: '3px 4px', width: '7%' }, children: "Qty"}, void 0, false, {fileName: _jsxFileName, lineNumber: 572}, this)
-            , _jsxDEV('th', { style: { border: '1px solid #000', padding: '3px 4px', width: '7%' }, children: "Unit"}, void 0, false, {fileName: _jsxFileName, lineNumber: 573}, this)
-            , _jsxDEV('th', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'right', width: '9%' }, children: "Price/Unit"}, void 0, false, {fileName: _jsxFileName, lineNumber: 574}, this)
-            , _jsxDEV('th', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'right', width: '10%' }, children: "Taxable"}, void 0, false, {fileName: _jsxFileName, lineNumber: 575}, this)
-            , _jsxDEV('th', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'right', width: '11%' }, children: "CGST"}, void 0, false, {fileName: _jsxFileName, lineNumber: 576}, this)
-            , _jsxDEV('th', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'right', width: '11%' }, children: "SGST"}, void 0, false, {fileName: _jsxFileName, lineNumber: 577}, this)
-            , _jsxDEV('th', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'right', width: '10%' }, children: "Amount"}, void 0, false, {fileName: _jsxFileName, lineNumber: 578}, this)
+      , _jsx('table', { style: { width: '100%', borderCollapse: 'collapse', border: '1px solid #000', borderTop: 'none' }, children: [
+        _jsx('thead', { children: 
+          _jsx('tr', { style: { backgroundColor: '#f3f3f3' }, children: [
+            _jsx('th', { style: { border: '1px solid #000', padding: '3px 4px', width: '4%' }, children: "#"}, void 0, false, {fileName: _jsxFileName, lineNumber: 569}, this)
+            , _jsx('th', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'left', width: '22%' }, children: "Item name" }, void 0, false, {fileName: _jsxFileName, lineNumber: 570}, this)
+            , _jsx('th', { style: { border: '1px solid #000', padding: '3px 4px', width: '9%' }, children: "HSN/SAC"}, void 0, false, {fileName: _jsxFileName, lineNumber: 571}, this)
+            , _jsx('th', { style: { border: '1px solid #000', padding: '3px 4px', width: '7%' }, children: "Qty"}, void 0, false, {fileName: _jsxFileName, lineNumber: 572}, this)
+            , _jsx('th', { style: { border: '1px solid #000', padding: '3px 4px', width: '7%' }, children: "Unit"}, void 0, false, {fileName: _jsxFileName, lineNumber: 573}, this)
+            , _jsx('th', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'right', width: '9%' }, children: "Price/Unit"}, void 0, false, {fileName: _jsxFileName, lineNumber: 574}, this)
+            , _jsx('th', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'right', width: '10%' }, children: "Taxable"}, void 0, false, {fileName: _jsxFileName, lineNumber: 575}, this)
+            , _jsx('th', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'right', width: '11%' }, children: "CGST"}, void 0, false, {fileName: _jsxFileName, lineNumber: 576}, this)
+            , _jsx('th', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'right', width: '11%' }, children: "SGST"}, void 0, false, {fileName: _jsxFileName, lineNumber: 577}, this)
+            , _jsx('th', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'right', width: '10%' }, children: "Amount"}, void 0, false, {fileName: _jsxFileName, lineNumber: 578}, this)
           ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 568}, this)
         }, void 0, false, {fileName: _jsxFileName, lineNumber: 567}, this)
-        , _jsxDEV('tbody', { children: [
+        , _jsx('tbody', { children: [
           items.map((item, idx) => (
-            _jsxDEV('tr', { children: [
-              _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'center' }, children: idx + 1}, void 0, false, {fileName: _jsxFileName, lineNumber: 584}, this)
-              , _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 4px', fontWeight: 'bold' }, children: item.item_name}, void 0, false, {fileName: _jsxFileName, lineNumber: 585}, this)
-              , _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'center' }, children: item.hsn_code}, void 0, false, {fileName: _jsxFileName, lineNumber: 586}, this)
-              , _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'center' }, children: item.quantity}, void 0, false, {fileName: _jsxFileName, lineNumber: 587}, this)
-              , _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'center' }, children: item.unit}, void 0, false, {fileName: _jsxFileName, lineNumber: 588}, this)
-              , _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'right' }, children: ["₹ " , formatCurrency(item.price_per_unit)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 589}, this)
-              , _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'right' }, children: ["₹ " , formatCurrency(item.taxable_amount)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 590}, this)
-              , _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'right' }, children: ["₹ " , formatCurrency(item.cgst_amount), " (" , item.cgst_rate, "%)"]}, void 0, true, {fileName: _jsxFileName, lineNumber: 591}, this)
-              , _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'right' }, children: ["₹ " , formatCurrency(item.sgst_amount), " (" , item.sgst_rate, "%)"]}, void 0, true, {fileName: _jsxFileName, lineNumber: 592}, this)
-              , _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'right' }, children: ["₹ " , formatCurrency(item.amount)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 593}, this)
+            _jsx('tr', { children: [
+              _jsx('td', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'center' }, children: idx + 1}, void 0, false, {fileName: _jsxFileName, lineNumber: 584}, this)
+              , _jsx('td', { style: { border: '1px solid #000', padding: '3px 4px', fontWeight: 'bold' }, children: item.item_name}, void 0, false, {fileName: _jsxFileName, lineNumber: 585}, this)
+              , _jsx('td', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'center' }, children: item.hsn_code}, void 0, false, {fileName: _jsxFileName, lineNumber: 586}, this)
+              , _jsx('td', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'center' }, children: item.quantity}, void 0, false, {fileName: _jsxFileName, lineNumber: 587}, this)
+              , _jsx('td', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'center' }, children: item.unit}, void 0, false, {fileName: _jsxFileName, lineNumber: 588}, this)
+              , _jsx('td', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'right' }, children: ["₹ " , formatCurrency(item.price_per_unit)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 589}, this)
+              , _jsx('td', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'right' }, children: ["₹ " , formatCurrency(item.taxable_amount)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 590}, this)
+              , _jsx('td', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'right' }, children: ["₹ " , formatCurrency(item.cgst_amount), " (" , item.cgst_rate, "%)"]}, void 0, true, {fileName: _jsxFileName, lineNumber: 591}, this)
+              , _jsx('td', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'right' }, children: ["₹ " , formatCurrency(item.sgst_amount), " (" , item.sgst_rate, "%)"]}, void 0, true, {fileName: _jsxFileName, lineNumber: 592}, this)
+              , _jsx('td', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'right' }, children: ["₹ " , formatCurrency(item.amount)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 593}, this)
             ]}, idx, true, {fileName: _jsxFileName, lineNumber: 583}, this)
           ))
-          , _jsxDEV('tr', { style: { fontWeight: 'bold', backgroundColor: '#f3f3f3' }, children: [
-            _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 4px' },}, void 0, false, {fileName: _jsxFileName, lineNumber: 597}, this)
-            , _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 4px' }, children: "Total"}, void 0, false, {fileName: _jsxFileName, lineNumber: 598}, this)
-            , _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 4px' },}, void 0, false, {fileName: _jsxFileName, lineNumber: 599}, this)
-            , _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'center' }, children: totalQty}, void 0, false, {fileName: _jsxFileName, lineNumber: 600}, this)
-            , _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 4px' },}, void 0, false, {fileName: _jsxFileName, lineNumber: 601}, this)
-            , _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 4px' },}, void 0, false, {fileName: _jsxFileName, lineNumber: 602}, this)
-            , _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'right' }, children: ["₹ " , formatCurrency(invoice.taxable_total)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 603}, this)
-            , _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'right' }, children: ["₹ " , formatCurrency(invoice.cgst_total)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 604}, this)
-            , _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'right' }, children: ["₹ " , formatCurrency(invoice.sgst_total)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 605}, this)
-            , _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'right' }, children: ["₹ " , formatCurrency(invoice.sub_total)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 606}, this)
+          , _jsx('tr', { style: { fontWeight: 'bold', backgroundColor: '#f3f3f3' }, children: [
+            _jsx('td', { style: { border: '1px solid #000', padding: '3px 4px' },}, void 0, false, {fileName: _jsxFileName, lineNumber: 597}, this)
+            , _jsx('td', { style: { border: '1px solid #000', padding: '3px 4px' }, children: "Total"}, void 0, false, {fileName: _jsxFileName, lineNumber: 598}, this)
+            , _jsx('td', { style: { border: '1px solid #000', padding: '3px 4px' },}, void 0, false, {fileName: _jsxFileName, lineNumber: 599}, this)
+            , _jsx('td', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'center' }, children: totalQty}, void 0, false, {fileName: _jsxFileName, lineNumber: 600}, this)
+            , _jsx('td', { style: { border: '1px solid #000', padding: '3px 4px' },}, void 0, false, {fileName: _jsxFileName, lineNumber: 601}, this)
+            , _jsx('td', { style: { border: '1px solid #000', padding: '3px 4px' },}, void 0, false, {fileName: _jsxFileName, lineNumber: 602}, this)
+            , _jsx('td', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'right' }, children: ["₹ " , formatCurrency(invoice.taxable_total)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 603}, this)
+            , _jsx('td', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'right' }, children: ["₹ " , formatCurrency(invoice.cgst_total)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 604}, this)
+            , _jsx('td', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'right' }, children: ["₹ " , formatCurrency(invoice.sgst_total)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 605}, this)
+            , _jsx('td', { style: { border: '1px solid #000', padding: '3px 4px', textAlign: 'right' }, children: ["₹ " , formatCurrency(invoice.sub_total)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 606}, this)
           ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 596}, this)
         ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 581}, this)
       ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 566}, this)
-      , _jsxDEV('table', { style: { width: '100%', borderCollapse: 'collapse', border: '1px solid #000', borderTop: 'none' }, children: 
-        _jsxDEV('tbody', { children: 
-          _jsxDEV('tr', { children: [
-            _jsxDEV('td', { style: { border: '1px solid #000', padding: '0', verticalAlign: 'top', width: '55%' }, children: 
-              _jsxDEV('table', { style: { width: '100%', borderCollapse: 'collapse' }, children: [
-                _jsxDEV('thead', { children: _jsxDEV('tr', { style: { backgroundColor: '#f3f3f3' }, children: [_jsxDEV('th', { style: { border: '1px solid #ccc', padding: '3px 5px', textAlign: 'left' }, children: "Tax type" }, void 0, false, {fileName: _jsxFileName, lineNumber: 615}, this), _jsxDEV('th', { style: { border: '1px solid #ccc', padding: '3px 5px', textAlign: 'right' }, children: "Taxable amount" }, void 0, false, {fileName: _jsxFileName, lineNumber: 615}, this), _jsxDEV('th', { style: { border: '1px solid #ccc', padding: '3px 5px', textAlign: 'center' }, children: "Rate"}, void 0, false, {fileName: _jsxFileName, lineNumber: 615}, this), _jsxDEV('th', { style: { border: '1px solid #ccc', padding: '3px 5px', textAlign: 'right' }, children: "Tax amount" }, void 0, false, {fileName: _jsxFileName, lineNumber: 615}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 615}, this)}, void 0, false, {fileName: _jsxFileName, lineNumber: 615}, this)
-                , _jsxDEV('tbody', { children: taxRows.map((r, i) => _jsxDEV('tr', { children: [_jsxDEV('td', { style: { border: '1px solid #ccc', padding: '3px 5px' }, children: r.type}, void 0, false, {fileName: _jsxFileName, lineNumber: 616}, this), _jsxDEV('td', { style: { border: '1px solid #ccc', padding: '3px 5px', textAlign: 'right' }, children: ["₹ " , formatCurrency(r.taxable)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 616}, this), _jsxDEV('td', { style: { border: '1px solid #ccc', padding: '3px 5px', textAlign: 'center' }, children: [r.rate, "%"]}, void 0, true, {fileName: _jsxFileName, lineNumber: 616}, this), _jsxDEV('td', { style: { border: '1px solid #ccc', padding: '3px 5px', textAlign: 'right' }, children: ["₹ " , formatCurrency(r.tax)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 616}, this)]}, i, true, {fileName: _jsxFileName, lineNumber: 616}, this))}, void 0, false, {fileName: _jsxFileName, lineNumber: 616}, this)
+      , _jsx('table', { style: { width: '100%', borderCollapse: 'collapse', border: '1px solid #000', borderTop: 'none' }, children: 
+        _jsx('tbody', { children: 
+          _jsx('tr', { children: [
+            _jsx('td', { style: { border: '1px solid #000', padding: '0', verticalAlign: 'top', width: '55%' }, children: 
+              _jsx('table', { style: { width: '100%', borderCollapse: 'collapse' }, children: [
+                _jsx('thead', { children: _jsx('tr', { style: { backgroundColor: '#f3f3f3' }, children: [_jsx('th', { style: { border: '1px solid #ccc', padding: '3px 5px', textAlign: 'left' }, children: "Tax type" }, void 0, false, {fileName: _jsxFileName, lineNumber: 615}, this), _jsx('th', { style: { border: '1px solid #ccc', padding: '3px 5px', textAlign: 'right' }, children: "Taxable amount" }, void 0, false, {fileName: _jsxFileName, lineNumber: 615}, this), _jsx('th', { style: { border: '1px solid #ccc', padding: '3px 5px', textAlign: 'center' }, children: "Rate"}, void 0, false, {fileName: _jsxFileName, lineNumber: 615}, this), _jsx('th', { style: { border: '1px solid #ccc', padding: '3px 5px', textAlign: 'right' }, children: "Tax amount" }, void 0, false, {fileName: _jsxFileName, lineNumber: 615}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 615}, this)}, void 0, false, {fileName: _jsxFileName, lineNumber: 615}, this)
+                , _jsx('tbody', { children: taxRows.map((r, i) => _jsx('tr', { children: [_jsx('td', { style: { border: '1px solid #ccc', padding: '3px 5px' }, children: r.type}, void 0, false, {fileName: _jsxFileName, lineNumber: 616}, this), _jsx('td', { style: { border: '1px solid #ccc', padding: '3px 5px', textAlign: 'right' }, children: ["₹ " , formatCurrency(r.taxable)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 616}, this), _jsx('td', { style: { border: '1px solid #ccc', padding: '3px 5px', textAlign: 'center' }, children: [r.rate, "%"]}, void 0, true, {fileName: _jsxFileName, lineNumber: 616}, this), _jsx('td', { style: { border: '1px solid #ccc', padding: '3px 5px', textAlign: 'right' }, children: ["₹ " , formatCurrency(r.tax)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 616}, this)]}, i, true, {fileName: _jsxFileName, lineNumber: 616}, this))}, void 0, false, {fileName: _jsxFileName, lineNumber: 616}, this)
               ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 614}, this)
             }, void 0, false, {fileName: _jsxFileName, lineNumber: 613}, this)
-            , _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 5px', verticalAlign: 'top', width: '45%' }, children: 
-              _jsxDEV('table', { style: { width: '100%' }, children: [_jsxDEV('thead', { children: _jsxDEV('tr', { style: { backgroundColor: '#f3f3f3' }, children: [_jsxDEV('th', { style: { textAlign: 'left', padding: '2px 4px' }, children: "Amounts"}, void 0, false, {fileName: _jsxFileName, lineNumber: 620}, this), _jsxDEV('th', {}, void 0, false, {fileName: _jsxFileName, lineNumber: 620}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 620}, this)}, void 0, false, {fileName: _jsxFileName, lineNumber: 620}, this), _jsxDEV('tbody', { children: [_jsxDEV('tr', { children: [_jsxDEV('td', { style: { padding: '2px 4px' }, children: "Sub Total" }, void 0, false, {fileName: _jsxFileName, lineNumber: 620}, this), _jsxDEV('td', { style: { textAlign: 'right', padding: '2px 4px' }, children: ["₹ " , formatCurrency(invoice.sub_total)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 620}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 620}, this), _jsxDEV('tr', { children: [_jsxDEV('td', { style: { padding: '2px 4px' }, children: "Round off" }, void 0, false, {fileName: _jsxFileName, lineNumber: 620}, this), _jsxDEV('td', { style: { textAlign: 'right', padding: '2px 4px' }, children: ["₹ " , formatCurrency(invoice.round_off)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 620}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 620}, this), _jsxDEV('tr', { style: { fontWeight: 'bold' }, children: [_jsxDEV('td', { style: { padding: '2px 4px' }, children: "Total"}, void 0, false, {fileName: _jsxFileName, lineNumber: 620}, this), _jsxDEV('td', { style: { textAlign: 'right', padding: '2px 4px' }, children: ["₹ " , formatCurrency(invoice.grand_total)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 620}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 620}, this), _jsxDEV('tr', { children: [_jsxDEV('td', { style: { padding: '2px 4px' }, children: "Received"}, void 0, false, {fileName: _jsxFileName, lineNumber: 620}, this), _jsxDEV('td', { style: { textAlign: 'right', padding: '2px 4px' }, children: ["₹ " , formatCurrency(invoice.received_amount)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 620}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 620}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 620}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 620}, this)
+            , _jsx('td', { style: { border: '1px solid #000', padding: '3px 5px', verticalAlign: 'top', width: '45%' }, children: 
+              _jsx('table', { style: { width: '100%' }, children: [_jsx('thead', { children: _jsx('tr', { style: { backgroundColor: '#f3f3f3' }, children: [_jsx('th', { style: { textAlign: 'left', padding: '2px 4px' }, children: "Amounts"}, void 0, false, {fileName: _jsxFileName, lineNumber: 620}, this), _jsx('th', {}, void 0, false, {fileName: _jsxFileName, lineNumber: 620}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 620}, this)}, void 0, false, {fileName: _jsxFileName, lineNumber: 620}, this), _jsx('tbody', { children: [_jsx('tr', { children: [_jsx('td', { style: { padding: '2px 4px' }, children: "Sub Total" }, void 0, false, {fileName: _jsxFileName, lineNumber: 620}, this), _jsx('td', { style: { textAlign: 'right', padding: '2px 4px' }, children: ["₹ " , formatCurrency(invoice.sub_total)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 620}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 620}, this), _jsx('tr', { children: [_jsx('td', { style: { padding: '2px 4px' }, children: "Round off" }, void 0, false, {fileName: _jsxFileName, lineNumber: 620}, this), _jsx('td', { style: { textAlign: 'right', padding: '2px 4px' }, children: ["₹ " , formatCurrency(invoice.round_off)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 620}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 620}, this), _jsx('tr', { style: { fontWeight: 'bold' }, children: [_jsx('td', { style: { padding: '2px 4px' }, children: "Total"}, void 0, false, {fileName: _jsxFileName, lineNumber: 620}, this), _jsx('td', { style: { textAlign: 'right', padding: '2px 4px' }, children: ["₹ " , formatCurrency(invoice.grand_total)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 620}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 620}, this), _jsx('tr', { children: [_jsx('td', { style: { padding: '2px 4px' }, children: "Received"}, void 0, false, {fileName: _jsxFileName, lineNumber: 620}, this), _jsx('td', { style: { textAlign: 'right', padding: '2px 4px' }, children: ["₹ " , formatCurrency(invoice.received_amount)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 620}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 620}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 620}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 620}, this)
             }, void 0, false, {fileName: _jsxFileName, lineNumber: 619}, this)
           ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 612}, this)
         }, void 0, false, {fileName: _jsxFileName, lineNumber: 611}, this)
       }, void 0, false, {fileName: _jsxFileName, lineNumber: 610}, this)
-      , _jsxDEV('table', { style: { width: '100%', borderCollapse: 'collapse', border: '1px solid #000', borderTop: 'none' }, children: 
-        _jsxDEV('tbody', { children: _jsxDEV('tr', { children: [_jsxDEV('td', { style: { border: '1px solid #000', padding: '2px 5px', width: '55%' }, children: [_jsxDEV('div', { style: { backgroundColor: '#f3f3f3', fontWeight: 'bold', padding: '2px 3px', marginBottom: '2px' }, children: "Invoice Amount In Words"   }, void 0, false, {fileName: _jsxFileName, lineNumber: 626}, this), _jsxDEV('div', { style: { padding: '2px 3px' }, children: numberToWords(invoice.grand_total)}, void 0, false, {fileName: _jsxFileName, lineNumber: 626}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 626}, this), _jsxDEV('td', { style: { border: '1px solid #000', padding: '2px 5px', width: '45%', textAlign: 'center' }, children: [_jsxDEV('div', { style: { backgroundColor: '#f3f3f3', fontWeight: 'bold', padding: '2px 3px', marginBottom: '2px' }, children: "Payment mode" }, void 0, false, {fileName: _jsxFileName, lineNumber: 626}, this), _jsxDEV('div', { style: { padding: '2px 3px' }, children: invoice.payment_mode}, void 0, false, {fileName: _jsxFileName, lineNumber: 626}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 626}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 626}, this)}, void 0, false, {fileName: _jsxFileName, lineNumber: 626}, this)
+      , _jsx('table', { style: { width: '100%', borderCollapse: 'collapse', border: '1px solid #000', borderTop: 'none' }, children: 
+        _jsx('tbody', { children: _jsx('tr', { children: [_jsx('td', { style: { border: '1px solid #000', padding: '2px 5px', width: '55%' }, children: [_jsx('div', { style: { backgroundColor: '#f3f3f3', fontWeight: 'bold', padding: '2px 3px', marginBottom: '2px' }, children: "Invoice Amount In Words"   }, void 0, false, {fileName: _jsxFileName, lineNumber: 626}, this), _jsx('div', { style: { padding: '2px 3px' }, children: numberToWords(invoice.grand_total)}, void 0, false, {fileName: _jsxFileName, lineNumber: 626}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 626}, this), _jsx('td', { style: { border: '1px solid #000', padding: '2px 5px', width: '45%', textAlign: 'center' }, children: [_jsx('div', { style: { backgroundColor: '#f3f3f3', fontWeight: 'bold', padding: '2px 3px', marginBottom: '2px' }, children: "Payment mode" }, void 0, false, {fileName: _jsxFileName, lineNumber: 626}, this), _jsx('div', { style: { padding: '2px 3px' }, children: invoice.payment_mode}, void 0, false, {fileName: _jsxFileName, lineNumber: 626}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 626}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 626}, this)}, void 0, false, {fileName: _jsxFileName, lineNumber: 626}, this)
       }, void 0, false, {fileName: _jsxFileName, lineNumber: 625}, this)
-      , _jsxDEV('table', { style: { width: '100%', borderCollapse: 'collapse', border: '1px solid #000', borderTop: 'none' }, children: 
-        _jsxDEV('tbody', { children: _jsxDEV('tr', { children: [
-          _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 5px', verticalAlign: 'top', width: '40%' }, children: [_jsxDEV('div', { style: { fontWeight: 'bold', marginBottom: '3px', backgroundColor: '#f3f3f3', padding: '2px 3px' }, children: "Bank Details" }, void 0, false, {fileName: _jsxFileName, lineNumber: 630}, this), _jsxDEV('div', { children: ["Name : "  , settings.bank_name]}, void 0, true, {fileName: _jsxFileName, lineNumber: 630}, this), _jsxDEV('div', { children: ["Account No. : "   , settings.account_no]}, void 0, true, {fileName: _jsxFileName, lineNumber: 630}, this), _jsxDEV('div', { children: ["IFSC code : "   , settings.ifsc_code]}, void 0, true, {fileName: _jsxFileName, lineNumber: 630}, this), _jsxDEV('div', { children: ["Account holder's name : "    , settings.account_holder]}, void 0, true, {fileName: _jsxFileName, lineNumber: 630}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 630}, this)
-          , _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 5px', verticalAlign: 'top', width: '35%' }, children: [_jsxDEV('div', { style: { fontWeight: 'bold', marginBottom: '3px', backgroundColor: '#f3f3f3', padding: '2px 3px' }, children: "Terms and Conditions"  }, void 0, false, {fileName: _jsxFileName, lineNumber: 631}, this), _jsxDEV('div', { style: { whiteSpace: 'pre-wrap', fontSize: '10px' }, children: settings.terms}, void 0, false, {fileName: _jsxFileName, lineNumber: 631}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 631}, this)
-          , _jsxDEV('td', { style: { border: '1px solid #000', padding: '3px 5px', verticalAlign: 'top', width: '25%', textAlign: 'center' }, children: [_jsxDEV('div', { style: { textAlign: 'right', marginBottom: '4px', fontSize: '10px' }, children: ["For : "  , settings.business_name]}, void 0, true, {fileName: _jsxFileName, lineNumber: 632}, this), _jsxDEV('div', { style: { minHeight: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }, children: settings.signature_url && _jsxDEV('img', { src: settings.signature_url, alt: "sig", style: { maxHeight: '40px', maxWidth: '100px', objectFit: 'contain' },}, void 0, false, {fileName: _jsxFileName, lineNumber: 632}, this )}, void 0, false, {fileName: _jsxFileName, lineNumber: 632}, this), _jsxDEV('div', { style: { marginTop: '4px', fontWeight: 'bold', fontSize: '10px', borderTop: '1px solid #000', paddingTop: '2px' }, children: "Authorized Signatory" }, void 0, false, {fileName: _jsxFileName, lineNumber: 632}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 632}, this)
+      , _jsx('table', { style: { width: '100%', borderCollapse: 'collapse', border: '1px solid #000', borderTop: 'none' }, children: 
+        _jsx('tbody', { children: _jsx('tr', { children: [
+          _jsx('td', { style: { border: '1px solid #000', padding: '3px 5px', verticalAlign: 'top', width: '40%' }, children: [_jsx('div', { style: { fontWeight: 'bold', marginBottom: '3px', backgroundColor: '#f3f3f3', padding: '2px 3px' }, children: "Bank Details" }, void 0, false, {fileName: _jsxFileName, lineNumber: 630}, this), _jsx('div', { children: ["Name : "  , settings.bank_name]}, void 0, true, {fileName: _jsxFileName, lineNumber: 630}, this), _jsx('div', { children: ["Account No. : "   , settings.account_no]}, void 0, true, {fileName: _jsxFileName, lineNumber: 630}, this), _jsx('div', { children: ["IFSC code : "   , settings.ifsc_code]}, void 0, true, {fileName: _jsxFileName, lineNumber: 630}, this), _jsx('div', { children: ["Account holder's name : "    , settings.account_holder]}, void 0, true, {fileName: _jsxFileName, lineNumber: 630}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 630}, this)
+          , _jsx('td', { style: { border: '1px solid #000', padding: '3px 5px', verticalAlign: 'top', width: '35%' }, children: [_jsx('div', { style: { fontWeight: 'bold', marginBottom: '3px', backgroundColor: '#f3f3f3', padding: '2px 3px' }, children: "Terms and Conditions"  }, void 0, false, {fileName: _jsxFileName, lineNumber: 631}, this), _jsx('div', { style: { whiteSpace: 'pre-wrap', fontSize: '10px' }, children: settings.terms}, void 0, false, {fileName: _jsxFileName, lineNumber: 631}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 631}, this)
+          , _jsx('td', { style: { border: '1px solid #000', padding: '3px 5px', verticalAlign: 'top', width: '25%', textAlign: 'center' }, children: [_jsx('div', { style: { textAlign: 'right', marginBottom: '4px', fontSize: '10px' }, children: ["For : "  , settings.business_name]}, void 0, true, {fileName: _jsxFileName, lineNumber: 632}, this), _jsx('div', { style: { minHeight: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }, children: settings.signature_url && _jsx('img', { src: settings.signature_url, alt: "sig", style: { maxHeight: '40px', maxWidth: '100px', objectFit: 'contain' },}, void 0, false, {fileName: _jsxFileName, lineNumber: 632}, this )}, void 0, false, {fileName: _jsxFileName, lineNumber: 632}, this), _jsx('div', { style: { marginTop: '4px', fontWeight: 'bold', fontSize: '10px', borderTop: '1px solid #000', paddingTop: '2px' }, children: "Authorized Signatory" }, void 0, false, {fileName: _jsxFileName, lineNumber: 632}, this)]}, void 0, true, {fileName: _jsxFileName, lineNumber: 632}, this)
         ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 629}, this)}, void 0, false, {fileName: _jsxFileName, lineNumber: 629}, this)
       }, void 0, false, {fileName: _jsxFileName, lineNumber: 628}, this)
     ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 533}, this)

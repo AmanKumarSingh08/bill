@@ -1,4 +1,4 @@
-const _jsxFileName = "";import {jsxDEV as _jsxDEV} from "react/jsx-dev-runtime"; function _nullishCoalesce(lhs, rhsFn) { if (lhs != null) { return lhs; } else { return rhsFn(); } }import { useState, useEffect, useRef } from 'react';
+const _jsxFileName = "";import {jsx as _jsx, jsxs as _jsxs} from "react/jsx-runtime"; function _nullishCoalesce(lhs, rhsFn) { if (lhs != null) { return lhs; } else { return rhsFn(); } }import { useState, useEffect, useRef } from 'react';
 import { supabase } from '../lib/supabase';
 
 import { useAuth } from '../contexts/AuthContext';
@@ -38,10 +38,10 @@ export default function ProductSearch({ value, onChange, onSelect, placeholder }
   }, [value, user]);
 
   return (
-    _jsxDEV('div', { ref: ref, className: "relative", children: [
-      _jsxDEV('div', { className: "relative", children: [
-        _jsxDEV(Search, { className: "absolute left-2 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-gray-400"      ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 43}, this )
-        , _jsxDEV('input', {
+    _jsx('div', { ref: ref, className: "relative", children: [
+      _jsx('div', { className: "relative", children: [
+        _jsx(Search, { className: "absolute left-2 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-gray-400"      ,}, void 0, false, {fileName: _jsxFileName, lineNumber: 43}, this )
+        , _jsx('input', {
           type: "text",
           value: value,
           onChange: e => onChange(e.target.value),
@@ -51,26 +51,26 @@ export default function ProductSearch({ value, onChange, onSelect, placeholder }
         )
       ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 42}, this)
       , open && suggestions.length > 0 && (
-        _jsxDEV('div', { className: "absolute z-50 left-0 bg-white border border-gray-200 rounded-lg shadow-2xl mt-1 overflow-y-auto"         ,
+        _jsx('div', { className: "absolute z-50 left-0 bg-white border border-gray-200 rounded-lg shadow-2xl mt-1 overflow-y-auto"         ,
           style: { minWidth: '340px', maxHeight: '400px' }, children: [
-          _jsxDEV('div', { className: "sticky top-0 bg-gray-50 px-3 py-2 border-b border-gray-100 text-xs text-gray-500 font-medium grid grid-cols-4 gap-2"            , children: [
-            _jsxDEV('span', { className: "col-span-2", children: "Item Name" }, void 0, false, {fileName: _jsxFileName, lineNumber: 57}, this)
-            , _jsxDEV('span', { className: "text-right", children: "Price"}, void 0, false, {fileName: _jsxFileName, lineNumber: 58}, this)
-            , _jsxDEV('span', { className: "text-right", children: "Stock"}, void 0, false, {fileName: _jsxFileName, lineNumber: 59}, this)
+          _jsx('div', { className: "sticky top-0 bg-gray-50 px-3 py-2 border-b border-gray-100 text-xs text-gray-500 font-medium grid grid-cols-4 gap-2"            , children: [
+            _jsx('span', { className: "col-span-2", children: "Item Name" }, void 0, false, {fileName: _jsxFileName, lineNumber: 57}, this)
+            , _jsx('span', { className: "text-right", children: "Price"}, void 0, false, {fileName: _jsxFileName, lineNumber: 58}, this)
+            , _jsx('span', { className: "text-right", children: "Stock"}, void 0, false, {fileName: _jsxFileName, lineNumber: 59}, this)
           ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 56}, this)
           , suggestions.map(p => (
-            _jsxDEV('button', {
+            _jsx('button', {
 
               type: "button",
               className: "w-full text-left px-3 py-2.5 hover:bg-sky-50 border-b border-gray-50 last:border-0 transition-colors grid grid-cols-4 gap-2 items-center"            ,
               onClick: () => { onSelect(p); setOpen(false); onChange(p.name); },
  children: [
-              _jsxDEV('div', { className: "col-span-2", children: [
-                _jsxDEV('div', { className: "font-medium text-gray-800 text-sm"  , children: p.name}, void 0, false, {fileName: _jsxFileName, lineNumber: 69}, this)
-                , _jsxDEV('div', { className: "text-xs text-gray-400" , children: [p.hsn_code, " • GST "   , p.cgst_rate + p.sgst_rate, "%"]}, void 0, true, {fileName: _jsxFileName, lineNumber: 70}, this)
+              _jsx('div', { className: "col-span-2", children: [
+                _jsx('div', { className: "font-medium text-gray-800 text-sm"  , children: p.name}, void 0, false, {fileName: _jsxFileName, lineNumber: 69}, this)
+                , _jsx('div', { className: "text-xs text-gray-400" , children: [p.hsn_code, " • GST "   , p.cgst_rate + p.sgst_rate, "%"]}, void 0, true, {fileName: _jsxFileName, lineNumber: 70}, this)
               ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 68}, this)
-              , _jsxDEV('div', { className: "text-right text-sm font-medium text-gray-700"   , children: ["₹", p.sale_price]}, void 0, true, {fileName: _jsxFileName, lineNumber: 72}, this)
-              , _jsxDEV('div', { className: `text-right text-sm font-medium ${p.stock_quantity <= p.low_stock_alert ? 'text-rose-600' : 'text-emerald-600'}`, children: [
+              , _jsx('div', { className: "text-right text-sm font-medium text-gray-700"   , children: ["₹", p.sale_price]}, void 0, true, {fileName: _jsxFileName, lineNumber: 72}, this)
+              , _jsx('div', { className: `text-right text-sm font-medium ${p.stock_quantity <= p.low_stock_alert ? 'text-rose-600' : 'text-emerald-600'}`, children: [
                 p.stock_quantity, " " , p.unit
               ]}, void 0, true, {fileName: _jsxFileName, lineNumber: 73}, this)
             ]}, p.id, true, {fileName: _jsxFileName, lineNumber: 62}, this)

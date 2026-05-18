@@ -1,6 +1,6 @@
 const _jsxFileName = "";
 
-import { jsxDEV as _jsxDEV } from "react/jsx-dev-runtime";
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
