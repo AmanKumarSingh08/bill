@@ -30,5 +30,10 @@ app.use((err, _req, res, _next) => {
   res.status(err.status || 500).json({ error: err.message || 'Server error' });
 });
 
-const PORT = process.env.PORT || 4000;
-app.listen(PORT, () => console.log(`API listening on http://localhost:${PORT}`));
+if (!process.env.VERCEL) {
+  const PORT = process.env.PORT || 5000;
+  app.listen(PORT, () => console.log(`API on ${PORT}`));
+}
+
+export default app;
+
